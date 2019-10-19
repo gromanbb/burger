@@ -12,12 +12,12 @@ const exphbs = require("express-handlebars");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// Set up Static directory to be served
+app.use(express.static("public"));
+
 // Set up the Express app to handle data parsing
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-
-// Set up Static directory to be served
-app.use(express.static("./public"));
 
 // Set up Handlebars
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
