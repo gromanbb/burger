@@ -12,7 +12,7 @@ const orm = {
     });
   },
   create: function(tableInput, name, cb) {
-    var queryString = "INSERT INTO " + tableInput + " (name) VALUES (" + name + ");";
+    var queryString = "INSERT INTO " + tableInput + " (burger_name) VALUES ('" + name + "');";
     console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) throw err;
@@ -26,7 +26,7 @@ const orm = {
       if (err) throw err;
       cb(result);
     });
-  },
+  }
 };
 
 // Export the orm object for the model (burgers.js)

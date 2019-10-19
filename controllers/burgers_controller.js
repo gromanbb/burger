@@ -19,27 +19,27 @@ router.get("/", function (req, res) {
   });
 });
 
-router.post("/api/burgers", function (req, res) {
+router.put("/api/burgers", function (req, res) {
   //ojo
-  console.log("req:" + JSON.stringify(req, null, 2));
-
+  console.log("req - post:" + JSON.stringify(req, null, 2));
   burger.create(req.body.name, function (result) {
     // Send back the ID of the new burger
     res.json({id: result.insertId});
+    res.redirect("/");
   });
 });
 
 router.put("/api/burgers/id", function (req, res) {
   //ojo
-  console.log("req:" + JSON.stringify(req, null, 2));
-
-  burger.update(req.body.id, function (result) {
+  console.log("req - put:" + JSON.stringify(req, null, 2));
+  burger.update(req.body.burger_id, function (result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
       res.status(200).end();
     };
+    res.redirect("/");
   });
 });
 

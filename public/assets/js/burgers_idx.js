@@ -5,6 +5,7 @@ $(function() {
     console.log("$(this):" + JSON.stringify($(this), null, 2));
 
     var id = $(this).val();
+    console.log("id: " + id);
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
