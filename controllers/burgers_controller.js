@@ -19,17 +19,17 @@ router.get("/", function (req, res) {
   });
 });
 
-router.put("/api/burgers", function (req, res) {
+router.post("/api/burgers", function (req, res) {
   //ojo
   console.log("req - post:" + JSON.stringify(req, null, 2));
   burger.create(req.body.name, function (result) {
     // Send back the ID of the new burger
-    res.json({id: result.insertId});
+    // res.json({id: result.insertId});
     res.redirect("/");
   });
 });
 
-router.put("/api/burgers/id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
   //ojo
   console.log("req - put:" + JSON.stringify(req, null, 2));
   burger.update(req.body.burger_id, function (result) {
