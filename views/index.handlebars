@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 text-center" id="col_hdr">
-      <h1>Eat-da-burger!</h1>
+      <h2>Eat-da-burger!</h2>
+      <img src="/assets/img/burger.png" alt="Eat-da-burger" style="width: 70%; height: 70%">
     </div>
   </div>
 
@@ -10,21 +11,18 @@
       {{#each burgers}}
         {{#unless this.devoured}}
           <div class="col-xs-9 text-center">
-            <pre>{{this.id}}. {{this.burger_name}}</pre>
+            <h5><pre>{{this.id}}. {{this.burger_name}}</pre></h5>
           </div>
           <div class="col-xs-3 text-center">
             <form>
-              <input class="form-control" type="hidden" type="text" name="burger_id" value={{this.id}}>
-              <br>
+              <input class="form-control" type="hidden" type="text" id="burger_id">
               <button class="devour" class="btn btn-default" value={{this.id}}>Devour it!</button>
             </form>
           </div>
         {{/unless}}
       {{/each}}
     </div>
-
-    <br><br>
-
+    <br>
     <div class="col-xs-6 text-center" id="col_bdy">
       {{#each burgers}}
         {{#if this.devoured}}
@@ -36,15 +34,13 @@
       {{/each}}
     </div>
   </div>
-
-  <br><br>
-
+  <br>
   <div class="row">
     <div class="col-xs-12 text-center enter-section">
       <form class="create-form">
-        <input class="form-control" type="text" name="burger_name" id="name">
+        <input class="form-control" type="text" id="burger_name">
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
       </form>
       <p>Enter in a burger you would like to eat!</p>
     </div>

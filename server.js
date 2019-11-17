@@ -30,8 +30,4 @@ app.use(routes);
 
 // Start the server to begin listening
 // =============================================================
-//app.listen(PORT);
-app.listen(PORT, function () {
-  // For debugging only
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+app.listen(PORT);
