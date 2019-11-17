@@ -27,7 +27,7 @@ Eat-da-burger is a ...
 	```
 	node server.js
 	```
-	![Browser](https://github.com/gromanbb/Eat-da-burger/blob/master/demo/Eat-da-burger.png)
+	![Demo](https://github.com/gromanbb/Eat-da-burger/blob/master/demo/Eat-da-burger.png)
 
 ### What Eat-da-burger does
 
