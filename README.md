@@ -27,12 +27,12 @@ Eat-da-burger is a ...
 	```
 	node server.js
 	```
-	![Demo](https://github.com/gromanbb/Eat-da-burger/blob/master/demo/Eat-da-burger.png)
+	![Demo](https://github.com/gromanbb/burger/blob/master/public/assets/demo/Eat-da-burger.png)
 
 ### What Eat-da-burger does
 
 - Eat-da-burger will allow an user to add a burger or to devour one:
 
-  ![Demo](https://github.com/gromanbb/Eat-da-burger/blob/master/demo/Eat-da-burger.png)
+  ![Demo](https://github.com/gromanbb/burger/blob/master/public/assets/demo/Eat-da-burger.png)
 
 	
